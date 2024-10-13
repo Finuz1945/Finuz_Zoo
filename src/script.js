@@ -19,28 +19,34 @@ document.getElementById("menuToggle").addEventListener("click", function () {
   });
 });
 const awanContainer = document.getElementById("awan");
-const ukuranAwan = 150; // Ukuran tetap untuk setiap gambar awan (150px x 150px)
+const tanahContainer = document.getElementById("tanah");
+const ukuranAwan = 150;
 
-// Dapatkan ukuran layar
 const screenWidth = window.innerWidth;
 
-// Hitung berapa banyak awan yang bisa ditampilkan dalam satu baris (tanpa overflow)
 const awanPerBaris = Math.floor(screenWidth / ukuranAwan);
+const tanahPerBaris = Math.floor(screenWidth / ukuranAwan);
 
-// Bersihkan container sebelum menambahkan awan baru
 awanContainer.innerHTML = "";
+tanahContainer.innerHTML = "";
 
-// Tambahkan gambar awan ke dalam satu baris
 for (let i = 1; i <= awanPerBaris; i++) {
-  // Buat elemen gambar baru
   const imgAwan = document.createElement("img");
 
-  // Tentukan atribut untuk gambar
   imgAwan.src = "./img/awan.png";
   imgAwan.width = ukuranAwan;
   imgAwan.height = ukuranAwan;
   imgAwan.alt = `awan${i}`;
 
-  // Tambahkan gambar ke dalam container
   awanContainer.appendChild(imgAwan);
+}
+for (let i = 1; i <= tanahPerBaris; i++) {
+  const imgTanah = document.createElement("img");
+
+  imgTanah.src = "./img/tanah.png";
+  imgTanah.width = ukuranAwan;
+  imgTanah.height = ukuranAwan;
+  imgTanah.alt = `tanah${i}`;
+
+  tanahContainer.appendChild(imgTanah);
 }
