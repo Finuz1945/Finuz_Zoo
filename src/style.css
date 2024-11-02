@@ -9,8 +9,14 @@
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 10px 2rem;
+  overflow: hidden;
 }
-
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
 .container-navbar {
   display: flex;
   justify-content: space-between;
@@ -52,6 +58,7 @@
 }
 .content-utama {
   padding-right: 1rem;
+  padding-top: 2rem;
   margin-top: 3rem;
   text-wrap: wrap;
 }

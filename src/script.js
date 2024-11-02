@@ -18,6 +18,7 @@ document.getElementById("menuToggle").addEventListener("click", function () {
     }
   });
 });
+
 const awanContainer = document.getElementById("awan");
 const tanahContainer = document.getElementById("tanah");
 const ukuranAwan = 150;
@@ -49,4 +50,32 @@ for (let i = 1; i <= tanahPerBaris; i++) {
   imgTanah.alt = `tanah${i}`;
 
   tanahContainer.appendChild(imgTanah);
+}
+
+document.querySelector("a[href='#tanah']").addEventListener("click", function (event) {
+  event.preventDefault(); // Mencegah aksi default agar kita bisa mengontrol scroll
+  const tanah = document.getElementById("tanah");
+
+  // Scroll dengan offset untuk memperhitungkan tinggi navbar
+  window.scrollTo({
+    top: tanah.offsetTop - navbar.offsetHeight,
+    behavior: "smooth",
+  });
+});
+
+window.onscroll = function () {
+  myFunction();
+};
+
+var navbar = document.getElementById("beranda");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky");
+    document.body.style.paddingTop = navbar.offsetHeight + "px";
+  } else {
+    navbar.classList.remove("sticky");
+    document.body.style.paddingTop = "0";
+  }
 }
