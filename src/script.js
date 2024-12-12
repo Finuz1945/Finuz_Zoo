@@ -53,10 +53,9 @@ for (let i = 1; i <= tanahPerBaris; i++) {
 }
 
 document.querySelector("a[href='#tanah']").addEventListener("click", function (event) {
-  event.preventDefault(); // Mencegah aksi default agar kita bisa mengontrol scroll
+  event.preventDefault();
   const tanah = document.getElementById("tanah");
 
-  // Scroll dengan offset untuk memperhitungkan tinggi navbar
   window.scrollTo({
     top: tanah.offsetTop - navbar.offsetHeight,
     behavior: "smooth",
