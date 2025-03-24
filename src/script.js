@@ -1,3 +1,4 @@
+// Menu toggle functionality
 document.getElementById("menuToggle").addEventListener("click", function () {
   const navbarNav = document.getElementById("navbarNav");
   navbarNav.classList.toggle("active");
@@ -6,71 +7,77 @@ document.getElementById("menuToggle").addEventListener("click", function () {
   bars.forEach((bar, index) => {
     if (navbarNav.classList.contains("active")) {
       if (index === 0) {
-        bar.style.transform = "rotate(-45deg) translate(-6px, 11px)";
+        bar.style.transform = "rotate(-45deg) translate(-7px, 7px)";
       } else if (index === 1) {
         bar.style.opacity = "0";
       } else {
-        bar.style.transform = "rotate(45deg) translate(-4px, -9px)";
+        bar.style.transform = "rotate(45deg) translate(-8px, -8px)";
       }
     } else {
       bar.style.transform = "none";
-      bars[1].style.opacity = "1";
+      bar.style.opacity = "1";
     }
   });
 });
 
-const awanContainer = document.getElementById("awan");
+// Add scene elements (clouds, ground)
+const awanContainer = document.getElementById("langit");
 const tanahContainer = document.getElementById("tanah");
-const ukuranAwan = 150;
+const ukuranAwan = 80;
 
 const screenWidth = window.innerWidth;
+const awanPerBaris = Math.ceil(screenWidth / ukuranAwan);
+const tanahPerBaris = Math.ceil(screenWidth / ukuranAwan);
 
-const awanPerBaris = Math.floor(screenWidth / ukuranAwan);
-const tanahPerBaris = Math.floor(screenWidth / ukuranAwan);
-
-awanContainer.innerHTML = "";
-tanahContainer.innerHTML = "";
-
+// Add clouds
 for (let i = 1; i <= awanPerBaris; i++) {
   const imgAwan = document.createElement("img");
-
   imgAwan.src = "./img/awan.png";
-  imgAwan.width = ukuranAwan;
   imgAwan.height = ukuranAwan;
   imgAwan.alt = `awan${i}`;
-
+  imgAwan.style.transform = `translateY(${Math.random() * 10}px)`;
   awanContainer.appendChild(imgAwan);
 }
+
+// Add ground elements
 for (let i = 1; i <= tanahPerBaris; i++) {
   const imgTanah = document.createElement("img");
-
   imgTanah.src = "./img/tanah.png";
-  imgTanah.width = ukuranAwan;
   imgTanah.height = ukuranAwan;
   imgTanah.alt = `tanah${i}`;
-
   tanahContainer.appendChild(imgTanah);
 }
 
-document.querySelector("a[href='#tanah']").addEventListener("click", function (event) {
-  event.preventDefault();
-  const tanah = document.getElementById("tanah");
+// Smooth scrolling for navigation
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
 
-  window.scrollTo({
-    top: tanah.offsetTop - navbar.offsetHeight,
-    behavior: "smooth",
+    const targetId = this.getAttribute("href");
+    if (targetId === "#") return;
+
+    const targetElement = document.querySelector(targetId);
+    const navbar = document.getElementById("beranda");
+
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop - navbar.offsetHeight,
+        behavior: "smooth",
+      });
+    }
   });
 });
 
+// Sticky navbar
 window.onscroll = function () {
-  myFunction();
+  makeNavbarSticky();
 };
 
-var navbar = document.getElementById("beranda");
-var sticky = navbar.offsetTop;
+const navbar = document.getElementById("beranda");
+const sticky = navbar.offsetTop;
 
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
+function makeNavbarSticky() {
+  if (window.pageYOffset > sticky) {
     navbar.classList.add("sticky");
     document.body.style.paddingTop = navbar.offsetHeight + "px";
   } else {

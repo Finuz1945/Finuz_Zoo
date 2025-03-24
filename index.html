@@ -4,22 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./img/Logo.png" />
-    <link rel="stylesheet" href="./src/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="/src/style.css" />
     <title>Finuz Zoo</title>
   </head>
   <body>
     <header class="navbar" id="beranda">
       <div class="container-navbar">
-        <a href="">
-          <img src="./img/Logo.png" width="70px" height="70px" alt="logo" srcset="./img/Logo.png 300w, ./img/Logo.png 600w, ./img/Logo.png 1200w" />
+        <a href="#" class="navbar-logo">
+          <img src="./img/Logo.png" alt="logo" />
         </a>
         <nav class="navbar-nav" id="navbarNav">
           <ul class="navbar-ul">
-            <li><a href="">Beranda</a></li>
-            <li><a href="">Langit</a></li>
-            <li><a href="#tanah">Darat</a></li>
-            <li><a href="">Air</a></li>
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#tampilan-langit">Langit</a></li>
+            <li><a href="#tampilan-darat">Darat</a></li>
+            <li><a href="#air">Air</a></li>
           </ul>
         </nav>
         <a href="#" class="menu-toggle" id="menuToggle">
@@ -29,8 +29,10 @@
         </a>
       </div>
     </header>
+
     <main>
-      <div class="container">
+      <!-- Hero Section -->
+      <div class="hero-container" id="tampilan-langit">
         <div class="content-utama">
           <h1>Rangkok Sulawesi</h1>
           <article class="page">
@@ -39,94 +41,136 @@
             diantaranya ada 13 jenis Rangkong dapat ditemukan di Sulawesi, Indonesia. Makanannya terutama buah-buahan juga kadal, kelelawar, tikus, ular dan berbagai jenis serangga.
           </article>
         </div>
-        <aside>
-          <img src="./img/Rangkok.png" class="img-content" alt="Rangkok Sulawesi" srcset="./img/Rangkok.png 300w, ./img/Rangkok.png 600w, ./img/Rangkok.png 1200w" />
-        </aside>
+        <div class="hero-image">
+          <img src="./img/Rangkok.png" class="img-content" alt="Rangkok Sulawesi" />
+        </div>
       </div>
-      <div class="awan" id="awan"></div>
-      <div class="card-container">
+
+      <!-- Sky Section -->
+      <div class="section-divider" id="langit">
+        <!-- Awan images will be added by JavaScript -->
+      </div>
+
+      <h2 class="section-title">Satwa Darat Indonesia</h2>
+      <div class="card-container" id="tampilan-darat">
         <div class="card-kecil">
           <img src="./img/tarsius.jpg" class="img-card-kecil" alt="tarsius" />
-          <p class="isi-card-kecil">
-            <b>Tarius kerdil</b> atau yang juga disebut tarsius gunung merupakan spesies hewan primata mungil yang berasal dari Sulawesi Tengah dengan bobot hanya berkisar 50 gram. Tarsius kerdil memiliki bulu yang sangat lembut dengan
-            warna coklat keabuan atau cokelat kegelapan.
-          </p>
+          <div class="card-content">
+            <h3>Tarius Kerdil</h3>
+            <p class="isi-card-kecil">
+              Tarius kerdil atau yang juga disebut tarsius gunung merupakan spesies hewan primata mungil yang berasal dari Sulawesi Tengah dengan bobot hanya berkisar 50 gram. Tarsius kerdil memiliki bulu yang sangat lembut dengan warna
+              coklat keabuan atau cokelat kegelapan.
+            </p>
+          </div>
         </div>
         <div class="card-kecil">
           <img src="./img/kuskus_beruang.jpg" class="img-card-kecil" alt="kuskus_beruang" />
-          <p class="isi-card-kecil">
-            <b>Bubutu</b> merupakan salah satu dari dua jenis mamalia berkantung, endemik Pulau Sulawesi yang dapat ditemui di Cagar Alam Tangkoko Batu Angus, yang merupakan salah satu kawasan konservasi yang ada di Sulawesi Utara. Bubutu
-            merupakan salah satu jenis satwa mamalia endemik yang dilindungi.
-          </p>
+          <div class="card-content">
+            <h3>Bubutu</h3>
+            <p class="isi-card-kecil">
+              Bubutu merupakan salah satu dari dua jenis mamalia berkantung, endemik Pulau Sulawesi yang dapat ditemui di Cagar Alam Tangkoko Batu Angus, yang merupakan salah satu kawasan konservasi yang ada di Sulawesi Utara. Bubutu
+              merupakan salah satu jenis satwa mamalia endemik yang dilindungi.
+            </p>
+          </div>
         </div>
         <div class="card-kecil">
           <img src="./img/macan.jpg" class="img-card-kecil" alt="macan" />
-          <p class="isi-card-kecil">
-            <b>Harimau</b> telah dikenal hingga seluruh dunia. Hewan endemik dengan tubuh terkecil dan warna kulit tergelap di antara jenis harimau lainnya ini, juga memiliki corak loreng hitam yang lebih rapat dan bila dilihat secara
-            seksama motifnya menyerupai sidik jari manusia. Populasi harimau Sumatra diperkirakan hanya tinggal tersisa 400 ekor di alam bebas.
-          </p>
+          <div class="card-content">
+            <h3>Harimau</h3>
+            <p class="isi-card-kecil">
+              Harimau telah dikenal hingga seluruh dunia. Hewan endemik dengan tubuh terkecil dan warna kulit tergelap di antara jenis harimau lainnya ini, juga memiliki corak loreng hitam yang lebih rapat dan bila dilihat secara seksama
+              motifnya menyerupai sidik jari manusia. Populasi harimau Sumatra diperkirakan hanya tinggal tersisa 400 ekor di alam bebas.
+            </p>
+          </div>
         </div>
         <div class="card-kecil">
           <img src="./img/komodo.jpg" class="img-card-kecil" alt="komodo" />
-          <p class="isi-card-kecil">
-            <b>Komodo</b> atau lengkapnya biawak komodo (Varanus komodoensis), adalah spesies biawak besar yang terdapat di Pulau Komodo, Provinsi Nusa Tenggara Timur, Indonesia. Komodo merupakan spesies terbesar dari familia Varanidae,
-            sekaligus kadal terbesar di dunia, dengan rata-rata panjang 2-3 meter dan beratnya bisa mencapai 100 kg.
-          </p>
+          <div class="card-content">
+            <h3>Komodo</h3>
+            <p class="isi-card-kecil">
+              Komodo atau lengkapnya biawak komodo (Varanus komodoensis), adalah spesies biawak besar yang terdapat di Pulau Komodo, Provinsi Nusa Tenggara Timur, Indonesia. Komodo merupakan spesies terbesar dari familia Varanidae,
+              sekaligus kadal terbesar di dunia, dengan rata-rata panjang 2-3 meter dan beratnya bisa mencapai 100 kg.
+            </p>
+          </div>
         </div>
         <div class="card-kecil">
           <img src="./img/gajah.jpg" class="img-card-kecil" alt="gajah" />
-          <p class="isi-card-kecil">
-            <b>Gajah Sumatra</b> merupakan mamalia terbesar di Indonesia, beratnya mencapai 6 ton dan tumbuh setinggi 3,5 m pada bahu. Periode kehamilan untuk bayi gajah sumatra adalah 22 bulan dengan umur rata-rata sampai 70 tahun.
-            Herbivora raksasa ini sangat cerdas dan memiliki otak yang lebih besar dibandingkan dengan mamalia darat lain.
-          </p>
+          <div class="card-content">
+            <h3>Gajah Sumatra</h3>
+            <p class="isi-card-kecil">
+              Gajah Sumatra merupakan mamalia terbesar di Indonesia, beratnya mencapai 6 ton dan tumbuh setinggi 3,5 m pada bahu. Periode kehamilan untuk bayi gajah sumatra adalah 22 bulan dengan umur rata-rata sampai 70 tahun. Herbivora
+              raksasa ini sangat cerdas dan memiliki otak yang lebih besar dibandingkan dengan mamalia darat lain.
+            </p>
+          </div>
         </div>
         <div class="card-kecil">
           <img src="./img/orang-utan.jpg" class="img-card-kecil" alt="orang-utan" />
-          <p class="isi-card-kecil">
-            <b>Orangutan</b> termasuk primata yang paling cerdas. Mereka menggunakan berbagai peralatan rumit dan membangun sarang tidur yang kompleks setiap malam dari ranting-ranting dan dedaunan. Penelitian tentang kemampuan belajar
-            mereka telah dilakukan secara ekstensif.
-          </p>
+          <div class="card-content">
+            <h3>Orangutan</h3>
+            <p class="isi-card-kecil">
+              Orangutan termasuk primata yang paling cerdas. Mereka menggunakan berbagai peralatan rumit dan membangun sarang tidur yang kompleks setiap malam dari ranting-ranting dan dedaunan. Penelitian tentang kemampuan belajar mereka
+              telah dilakukan secara ekstensif.
+            </p>
+          </div>
         </div>
       </div>
-      <div class="tanah" id="tanah"></div>
+
+      <!-- Land Section -->
+      <div class="section-divider" id="tanah">
+        <!-- Tanah images will be added by JavaScript -->
+      </div>
+
+      <h2 class="section-title" id="air">Satwa Air Indonesia</h2>
       <div class="card-container">
         <div class="card-kecil">
-          <img src="./img/dugong.jpg" class="img-card-kecil" alt="tarsius" />
-          <p class="isi-card-kecil">
-            <b>Duyung atau dugong </b> adalah sejenis mamalia laut yang merupakan salah satu anggota Sirenia atau sapi laut yang masih bertahan hidup selain manatee dan mampu mencapai usia 22 sampai 25 tahun. Kebanyakan duyung tinggal di
-            kawasan timur Indonesia dan perairan utara Australia.
-          </p>
+          <img src="./img/dugong.jpg" class="img-card-kecil" alt="dugong" />
+          <div class="card-content">
+            <h3>Duyung</h3>
+            <p class="isi-card-kecil">
+              Duyung atau dugong adalah sejenis mamalia laut yang merupakan salah satu anggota Sirenia atau sapi laut yang masih bertahan hidup selain manatee dan mampu mencapai usia 22 sampai 25 tahun. Kebanyakan duyung tinggal di kawasan
+              timur Indonesia dan perairan utara Australia.
+            </p>
+          </div>
         </div>
         <div class="card-kecil">
-          <img src="./img/pesut-mahakam.jpg" class="img-card-kecil" alt="kuskus_beruang" />
-          <p class="isi-card-kecil">
-            <b>Pesut mahakam</b> (Orcaella brevirostris) adalah sejenis hewan mamalia yang sering disebut lumba-lumba air tawar yang berstatus terancam punah. Pesut ini dinamakan pesut mahakam karena banyak ditemukan di perairan Sungai
-            Mahakam, tetapi kalangan peneliti barat lebih mengenal hewan ini dengan nama Irrwaakbarddy Dolphin.
-          </p>
+          <img src="./img/pesut-mahakam.jpg" class="img-card-kecil" alt="pesut-mahakam" />
+          <div class="card-content">
+            <h3>Pesut Mahakam</h3>
+            <p class="isi-card-kecil">
+              Pesut mahakam (Orcaella brevirostris) adalah sejenis hewan mamalia yang sering disebut lumba-lumba air tawar yang berstatus terancam punah. Pesut ini dinamakan pesut mahakam karena banyak ditemukan di perairan Sungai Mahakam,
+              tetapi kalangan peneliti barat lebih mengenal hewan ini dengan nama Irrwaaddy Dolphin.
+            </p>
+          </div>
         </div>
         <div class="card-kecil">
-          <img src="./img/ikan-wader.jpg" class="img-card-kecil" alt="macan" />
-          <p class="isi-card-kecil">
-            <b>Wader</b> bintik-dua adalah sejenis ikan kecil anggota famili Cyprinidae anak-suku Cyprininae. Ikan ini menyebar di Indonesia bagian barat (Sumatra, Kalimantan, Jawa, Bali, dan Lombok), Indocina, dan Filipina. Warna dan
-            bentuk tubuh ikan ini amat berubah-ubah.
-          </p>
+          <img src="./img/ikan-wader.jpg" class="img-card-kecil" alt="ikan-wader" />
+          <div class="card-content">
+            <h3>Ikan Wader</h3>
+            <p class="isi-card-kecil">
+              Wader bintik-dua adalah sejenis ikan kecil anggota famili Cyprinidae anak-suku Cyprininae. Ikan ini menyebar di Indonesia bagian barat (Sumatra, Kalimantan, Jawa, Bali, dan Lombok), Indocina, dan Filipina. Warna dan bentuk
+              tubuh ikan ini amat berubah-ubah.
+            </p>
+          </div>
         </div>
       </div>
     </main>
+
     <footer>
-      <p>&copy;Firdaus Nuzula Nur Rosyid, 2023. ALL RIGHTS RESERVED</p>
-      <div class="social-media">
-        <p>Follow kami di :</p>
-        <ul>
-          <li>
-            <a href="www.linkedin.com/in/firdaus-nuzula-nur-rosyid-228114166"><i class="fab fa-linkedin"></i></a>
-          </li>
-          <li>
-            <a href="https://github.com/Finuz1945"><i class="fab fa-github"></i></a>
-          </li>
-        </ul>
+      <div class="footer-container">
+        <p class="copyright">&copy; Firdaus Nuzula Nur Rosyid, 2023. ALL RIGHTS RESERVED</p>
+        <div class="social-media">
+          <p>Follow kami di:</p>
+          <ul>
+            <li>
+              <a href="https://www.linkedin.com/in/firdaus-nuzula-nur-rosyid-228114166" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a href="https://github.com/Finuz1945" target="_blank"><i class="fab fa-github"></i></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
-    <script src="./src/script.js"></script>
+    <script src="/src/script.js"></script>
   </body>
 </html>
